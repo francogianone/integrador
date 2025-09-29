@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Inicio | CellShop</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+</style>
+</head>
+<body>
+  <header>
+    <h1>CellShop</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="pages/productos.html">Productos</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li id="nav-carrito">
+          <a href="pages/carrito.html">🛒 <span id="cart-count-badge">0</span></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h2>Bienvenido a CellShop</h2>
+      <p>Equipos <strong>seleccionados</strong>, comprá <strong>calidad y seguridad</strong> garantizada.</p>
+    </section>
+
+    <h2>Destacados</h2>
+    <section id="destacados">
+ 
+      <div class="producto">
+        <h3>Iphone 13 128gb White PREMIUM</h3>
+        <img src="assets/img/101.jpg" alt="Iphone 13 White">
+        <p>Precio: $450000</p>
+        <p>Stock: <span id="stock-101" data-stock="3">3</span></p>
+        <div class="acciones">
+          <a href="pages/producto.html?id=101"><button>Ver detalles</button></a>
+          <button class="btn-add" data-id="101">Agregar</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>Iphone 15 256gb BLACK MEDIUM</h3>
+        <img src="assets/img/102.jpg" alt="Iphone 15 Black">
+        <p>Precio: $750000</p>
+        <p>Stock: <span id="stock-102" data-stock="12">12</span></p>
+        <div class="acciones">
+          <a href="pages/producto.html?id=102"><button>Ver detalles</button></a>
+          <button class="btn-add" data-id="102">Agregar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CellShop</p>
+  </footer>
+  <script type="module" src="assets/js/index.js"></script>
+</body>
+</html>
