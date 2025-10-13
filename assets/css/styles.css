@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Google Sans Code", sans-serif;
+
 }
 
 body {
@@ -15,7 +16,7 @@ body {
 header {
   background-color: #000000;
   color: white;
-  padding: 1rem;
+  
 }
 
 header h1 {
@@ -23,32 +24,54 @@ header h1 {
   margin: 4rem;
 }
 
+header h1 a {
+  color: inherit; 
+  text-decoration: none; 
+}
 
 nav {
   position: relative;
   display: flex;
-  justify-content: center; 
   align-items: center;
-  min-height: 50px; 
+  min-height: 50px;
+ 
+   
 }
 
 
 .nav-links {
   list-style: none;
-  display: flex; 
-  gap: 20px;
+  display: flex;
+  width: 100%; 
   margin: 0;
   padding: 0;
+  align-items: stretch;
+  
+}
+
+.nav-links li {
+  flex: 1;
+  text-align: center; 
 }
 
 nav a {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 6px;
   text-decoration: none;
   color: white;
   font-weight: bold;
+  padding: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* menu boton*/
@@ -73,14 +96,19 @@ nav a:hover {
 @media (max-width: 600px) {
   nav {
     justify-content: flex-start;
+    position: relative;
+     margin-bottom: 1rem;
   }
 
   .hamburger {
     display: flex;
     position: absolute;
-    top: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
     left: 1rem;
     z-index: 10; 
+    padding: 1.4rem;
+    
   }
 
   .nav-links {
@@ -131,7 +159,7 @@ h2 {
   border: 1px solid #ccc;
   border-radius: 1rem;
   background-color: white;
-  box-shadow: 2px 2px 2px 2px rgba(32, 32, 32, 0.3);
+  box-shadow: 2px 2px 4px rgba(32, 32, 32, 0.2);
   padding: 1rem;
   display: flex;
   flex-direction: column;
