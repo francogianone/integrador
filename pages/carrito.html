@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Carrito de Compras | CellShop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Revisá los productos en tu carrito de compras de CellShop. Finalizá tu compra de forma rápida y segura.">
+  <meta name="keywords" content="carrito, compras, checkout, finalizar compra, mis productos">
+
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+ 
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+</style>
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html">CellShop</a></h1>
+      <nav>
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li id="nav-carrito">
+            <a href="carrito.html">🛒 <span id="cart-count-badge">0</span></a>
+          </li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <h2>Carrito de Compras</h2>
+    <section id="carritoContenido">
+      </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CellShop</p>
+  </footer>
+  <script type="module" src="../assets/js/carrito.js"></script>
+</body>
+</html>

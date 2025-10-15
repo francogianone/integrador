@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Google Sans Code", sans-serif;
+
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  background-color: #000000;
+  color: white;
+  
+}
+
+header h1 {
+  text-align: center;
+  margin: 4rem;
+}
+
+header h1 a {
+  color: inherit; 
+  text-decoration: none; 
+}
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+ 
+   
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  width: 100%; 
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+  
+}
+
+.nav-links li {
+  flex: 1;
+  text-align: center; 
+}
+
+nav a {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 6px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* menu boton*/
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* estilos mobile */
+
+@media (max-width: 600px) {
+  nav {
+    justify-content: flex-start;
+    position: relative;
+     margin-bottom: 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+    z-index: 10; 
+    padding: 1.4rem;
+    
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    right: 0;
+    background: #000000;
+    padding: 15px;
+    z-index: 5;
+    align-items: center; 
+  }
+
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+main {
+  padding: 2rem;
+}
+
+h2 {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+#hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#destacados,
+#catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+#catalogo {
+  padding: 2rem;
+}
+
+.producto {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 2px 2px 4px rgba(32, 32, 32, 0.2);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.producto img {
+  max-width: 100%;
+  height: 250px;
+  object-fit: contain;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+#carritoContenido img {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.producto p {
+  padding: 0.5rem;
+}
+
+.producto h3 {
+  margin: 2rem;
+  text-align: center;
+}
+
+.producto .acciones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.producto .acciones button,
+.producto .acciones a button {
+  border-radius: 0.5rem;
+  min-width: 100px;
+  box-shadow: 2px 2px 2px 2px rgba(109, 109, 109, 0.3);
+}
+
+#filtros-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+#filtros-categorias button {
+  border: none;
+  background: #000000;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: white;
+}
+
+#filtros-categorias button:hover {
+  background: #4b4b4b;
+}
+
+#filtros-categorias button.activo {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+}
+
+#detalleProducto {
+  display: block;
+  text-align: center;
+}
+
+#detalleProducto p {
+  margin: 2rem;
+ 
+}
+
+#detalleProducto img {
+  margin: 2rem;
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+}
+
+#detalleProducto button {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+button {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+#nav-carrito a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: white;
+}
+
+#cart-count-badge {
+  background: #e53935;
+  color: white;
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+#cart-count-badge.bump {
+  animation: cart-bump 500ms ease-out;
+}
+
+@keyframes cart-bump {
+  0% { transform: scale(1); }
+  20% { transform: scale(1.35); }
+  40% { transform: scale(0.8); }
+  60% { transform: scale(1.2); }
+  80% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+#carritoContenido table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+#carritoContenido th,
+#carritoContenido td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#carritoContenido th {
+  background: #f5f5f5;
+}
+
+#carritoContenido img#carrito {
+  max-width: none;
+  max-height: none;
+  width: 250px;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+  opacity: 0.3;
+}
+
+#p-carrito-vacio {
+  margin-block: 3rem;
+  text-align: center;
+}
+
+#carrito {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.resumen {
+  margin: 2rem auto 0 auto;
+  max-width: 400px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.resumen p {
+  margin: 0.8rem;
+}
+
+.resumen button {
+  border-radius: 0.5rem;
+  width: 100%;
+}

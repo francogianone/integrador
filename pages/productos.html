@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos | Catálogo de Celulares en CellShop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="description" content="Explorá nuestro catálogo completo de celulares en CellShop. Encontrá iPhones, Samsung, Xiaomi y más. Filtrá por categoría y encontrá el equipo perfecto para vos.">
+  <meta name="keywords" content="catálogo, celulares, iphone 15, iphone 13, samsung s22, xiaomi redmi, premium, android">
+
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+</style>
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html">CellShop</a></h1>
+      <nav>
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li id="nav-carrito">
+            <a href="carrito.html">🛒 <span id="cart-count-badge">0</span></a>
+          </li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <h2>Catálogo de Productos</h2>
+    
+    <div id="filtros-categorias">
+      <button data-cat="todos" class="activo">Todos</button>
+      <button data-cat="premium">Premium</button>
+      <button data-cat="medium">Medium</button>
+      <button data-cat="standard">Standard</button>
+      <button data-cat="android">Android</button>
+    </div>
+
+    <section id="catalogo">
+      <div class="producto" data-categoria="premium">
+        <h3>Iphone 13 128gb White PREMIUM</h3>
+        <img src="../assets/img/101.jpg" alt="Iphone 13 color blanco">
+        <p>Precio: $450000</p>
+        <p>Stock: <span id="stock-101" data-stock="3">3</span></p>
+        <div class="acciones">
+          <a href="producto.html?id=101"><button>Ver detalles</button></a>
+          <button class="btn-add" data-id="101">Agregar</button>
+        </div>
+      </div>
+
+      <div class="producto" data-categoria="medium">
+        <h3>Iphone 15 256gb BLACK MEDIUM</h3>
+        <img src="../assets/img/102.jpg" alt="Iphone 15 color negro">
+        <p>Precio: $750000</p>
+        <p>Stock: <span id="stock-102" data-stock="12">12</span></p>
+        <div class="acciones">
+          <a href="producto.html?id=102"><button>Ver detalles</button></a>
+          <button class="btn-add" data-id="102">Agregar</button>
+        </div>
+      </div>
+
+      <div class="producto" data-categoria="premium">
+        <h3>Iphone 14 128gb Blue PREMIUM</h3>
+        <img src="../assets/img/201.jpg" alt="Iphone 14 color azul">
+        <p>Precio: $550000</p>
+        <p>Stock: <span id="stock-201" data-stock="5">5</span></p>
+        <div class="acciones">
+          <a href="producto.html?id=201"><button>Ver detalles</button></a>
+          <button class="btn-add" data-id="201">Agregar</button>
+        </div>
+      </div>
+
+      <div class="producto" data-categoria="medium">
+        <h3>Iphone 13 256gb Red MEDIUM</h3>
+        <img src="../assets/img/202.jpg" alt="Iphone 13 color rojo">
+        <p>Precio: $400000</p>
+        <p>Stock: <span id="stock-202" data-stock="7">7</span></p>
+        <div class="acciones">
+          <a href="producto.html?id=202"><button>Ver detalles</button></a>
+          <button class="btn-add" data-id="202">Agregar</button>
+        </div>
+      </div>
+
+      <div class="producto" data-categoria="standard">
+        <h3>Iphone 12 128gb Black STANDARD</h3>
+        <img src="../assets/img/203.jpg" alt="Iphone 12 color negro">
+        <p>Precio: $300000</p>
+        <p>Stock: <span id="stock-203" data-stock="10">10</span></p>
+        <div class="acciones">
+          <a href="producto.html?id=203"><button>Ver detalles</button></a>
+          <button class="btn-add" data-id="203">Agregar</button>
+        </div>
+      </div>
+
+      <div class="producto" data-categoria="premium">
+        <h3>Iphone 15 Pro 256gb Silver PREMIUM</h3>
+        <img src="../assets/img/204.jpg" alt="Iphone 15 Pro color plata">
+        <p>Precio: $900000</p>
+        <p>Stock: <span id="stock-204" data-stock="2">2</span></p>
+        <div class="acciones">
+          <a href="producto.html?id=204"><button>Ver detalles</button></a>
+          <button class="btn-add" data-id="204">Agregar</button>
+        </div>
+      </div>
+
+      <div class="producto" data-categoria="android">
+        <h3>Samsung Galaxy S22 Ultra</h3>
+        <img src="../assets/img/301.jpg" alt="Samsung Galaxy S22 Ultra">
+        <p>Precio: $650000</p>
+        <p>Stock: <span id="stock-301" data-stock="4">4</span></p>
+        <div class="acciones">
+          <a href="producto.html?id=301"><button>Ver detalles</button></a>
+          <button class="btn-add" data-id="301">Agregar</button>
+        </div>
+      </div>
+
+      <div class="producto" data-categoria="android">
+        <h3>Xiaomi Redmi Note 12</h3>
+        <img src="../assets/img/302.jpg" alt="Xiaomi Redmi Note 12">
+        <p>Precio: $180000</p>
+        <p>Stock: <span id="stock-302" data-stock="15">15</span></p>
+        <div class="acciones">
+          <a href="producto.html?id=302"><button>Ver detalles</button></a>
+          <button class="btn-add" data-id="302">Agregar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CellShop</p>
+  </footer>
+  <script type="module" src="../assets/js/catalogo.js"></script>
+</body>
+</html>
